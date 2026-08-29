@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piko Portfolio</title>
+  <!-- Import Font Outfit untuk nuansa modern minimalis -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+
+</head>
+
+<body class="bg-[#F1F1F1] text-slate-800 antialiased min-h-screen overflow-x-hidden">
+
+  <!-- HEADER / NAVBAR (Tema Gelap) -->
+  <header id="navbar" class="h-[64px] fixed top-[15px] left-[360px] right-[360px] lg:left-[370px] lg:right-[370px] md:left-[180px] md:right-[180px]
+
+         z-[1000] flex justify-between items-center gap-[48px] md:gap-[24px] lg:gap-[120px]
+         px-[32px] md:px-[16px] lg:px-[32px] text-black rounded-[16px] transition-all duration-700 ease-in-out">
+    <!-- Logo -->
+    <a href="#"
+      class="text-[16px] md:text-[14px] tracking-wide transition-opacity hover:opacity-75 text-black md:text-black">
+      <span class="font-serif italic text-black md:text-black">P</span>iko
+    </a>
+    <!-- Nav links (desktop/tablet) -->
+    <nav
+      class="hidden md:flex items-center gap-[120px] text-[16px] md:gap-[24px] text-black md:text-black tracking-[-0.08em]">
+      <a href="#about-section" class="hover:text-black md:hover:text-gray-200 transition-colors duration-300">About</a>
+      <a href="#what-i-do-section" class="hover:text-black md:hover:text-gray-200 transition-colors duration-300">What I
+        Do</a>
+      <a href="#exploration"
+        class="hover:text-black md:hover:text-gray-200 transition-colors duration-300">Exploration</a>
+    </nav>
+
+  </header>
+
+  <div class="h-[200vh] relative">
+    <!-- Home Section: sticky agar diam di layar saat di-scroll -->
+    <div
+      class="sticky top-0 h-screen z-10 bg-[#F1F1F1] flex flex-col justify-start items-center px-[24px] md:px-[40px] lg:px-[60px] pt-[90px] pb-[30px] overflow-hidden">
+
+      <!-- Pembungkus Utama Bergaris (Swiss Grid Frame) tanpa overflow-hidden agar 3D menembus ke bawah -->
+      <div
+        class="w-full max-w-[1280px] h-[calc(100vh-120px)] border border-[#d9d9d9] bg-[#F1F1F1] relative flex flex-col">
+
+
+        <!-- ================= BARIS ATAS ================= -->
+        <div class="grid grid-cols-12 border-b border-[#d9d9d9] flex-1 items-center">
+
+          <!-- Kiri Kosong -->
+          <div class="col-span-2 md:col-span-1 lg:col-span-2 border-r border-[#d9d9d9]"></div>
+
+          <!-- Tengah: Judul & Subtitle -->
+          <div
+            class="col-span-8 md:col-span-10 lg:col-span-8 p-[8px] text-center flex flex-col justify-center items-center">
+            <div
+              class="split bg-clip-text mx-auto text-[64px] md:text-[96px] lg:text-[140px] tracking-[-0.08em] leading-[1.05] mb-[8px]">
+              Making <span
+                class="font-serif italic inline-block pb-[12px] md:pb-[20px] pr-[8px] md:pr-[16px]">Every</span><br>
+              <span class="font-serif italic">Pixel</span> Matter
+            </div>
+            <!-- Subtitle dibuat sedikit lebih jelas -->
+            <div class="split text-[16px] md:text-[22px] tracking-[-0.08em] text-[#757575]">
+              In Every Visual Experience
+            </div>
+          </div>
+
+          <!-- Kanan Kosong -->
+          <div class="col-span-2 md:col-span-1 lg:col-span-2 border-l border-[#d9d9d9]"></div>
+        </div>
+
+        <!-- ================= BARIS BAWAH ================= -->
+        <div class="grid grid-cols-12 flex-1">
+
+          <!-- Kiri: Lokasi -->
+          <div
+            class="col-span-3 md:col-span-4 lg:col-span-3 border-r border-[#d9d9d9] p-[16px] md:p-[24px] lg:p-[32px] flex items-center">
+            <div class="text-[14px] md:text-[16px] lg:text-[18px] tracking-[-0.08em] text-[#757575] leading-snug">
+              Based in<br>
+              <span class="font-serif italic text-[#0C0C0D] text-[18px] md:text-[20px] lg:text-[22px]">Yogyakarta,
+                IDN</span>
+            </div>
+          </div>
+
+          <!-- Tengah: Objek 3D Spline -->
+          <div class="col-span-6 md:col-span-4 lg:col-span-6 relative flex justify-center items-center">
+            <div class="absolute top-[10px] w-[650px] h-[420px] lg:w-[1100px] lg:h-[700px] pointer-events-none">
+              <spline-viewer loading-anim-type="spinner-small-dark"
+                url="https://prod.spline.design/2r8Wp7pupcbWakay/scene.splinecode"
+                class="w-full h-full scale-100 origin-center">
+              </spline-viewer>
+            </div>
+          </div>
+
+          <!-- Kanan: Tombol Action -->
+          <div
+            class="col-span-3 md:col-span-4 lg:col-span-3 border-l border-[#d9d9d9] p-[16px] md:p-[24px] lg:p-[32px] flex flex-col justify-center items-center gap-[12px] md:gap-[16px]">
+
+            <!-- Tombol Contact Me -->
+            <div
+              class="inline-flex items-center w-fit gap-[6px] md:gap-[8px] px-[12px] md:px-[16px] py-[8px] md:py-[12px] bg-gradient-to-b from-[#8c8c8e] from-[5%] to-[#0c0c0d] to-[50%] text-white rounded-full cursor-pointer group">
+              <span class="text-[13px] md:text-[15px] font-normal tracking-[-0.08em]">Contact Me</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4 md:w-6 md:h-6 inline-block -rotate-45 transition-transform duration-300 group-hover:rotate-0 group-hover:translate-x-0.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+
+            <!-- Tombol See My Resume -->
+            <div
+              class="inline-flex items-center w-fit px-[12px] md:px-[16px] py-[8px] md:py-[12px] border border-[#b3b3b3] text-[#757575] rounded-full cursor-pointer transition-all duration-300 hover:border-[#0C0C0D] hover:text-[#0C0C0D] hover:bg-black/5">
+              <span class="text-[13px] md:text-[15px] font-normal tracking-[-0.08em]">See My Resume</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div><!-- Tutup sticky top-0 -->
+  </div><!-- Tutup h-[200vh] track -->
+
+
+
+
+  <!--What i do section-->
+
+  <div class="w-full overflow-x-clip">
+    <section id="what-i-do-section"
+      class="relative z-20 bg-[#0C0C0D] text-white rounded-t-[48px] rounded-b-[0px] p-[24px] md:p-[40px] lg:p-[72px] w-[calc(100%-30px)] mx-auto mt-[-100vh]">
+
+      <!--What i do section header-->
+      <div class="flex  items-start justify-center gap-auto mb-[56px] ">
+
+        <div class="mr-auto items-center w-fit px-[16px] py-[10px] bg-white text-[#0C0C0D] rounded-[16px]">
+          <span class="text-[20px] font-serif tracking-[-0.08em]">What I Do</span>
+        </div>
+
+        <div class=" w-[480px] h-auto text-right ">
+          <span class=" split md:text-[40px] lg:text-[54px]  mr-auto leading-tight tracking-[-0.08em]"><span
+              class="font-serif italic">Projects</span> That<br>Have Been <span class="font-serif italic">Made</span>
+        </div>
+      </div>
+
+      <!--What i do section content-->
+      <!-- Cukup ubah container luar menjadi grid-cols-2 -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[24px] md:gap-[40px] lg:gap-[30px] justify-items-center">
+
+        <!-- Card 1 -->
+        <div
+          class="what-i-do-card w-full h-auto md:h-auto lg:h-[660px] bg-[#0C0C0D] text-[#0C0C0D] rounded-[16px] flex flex-col overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#1E1E1E]">
+          <div class="flex flex-col lg:m-[32px] md:m-[20px] md:mb-[32px] sm:m-[10px] sm:mb-[10px] ">
+            <span class="text-[16px] text-white font-serif italic mb-[16px]">Website & Mobile App Design</span>
+            <span class="text-[24px] text-white text-justify leading-tight tracking-[-0.08em]">My project here began
+              with my UI/UX skills and evolved into a real project. The website I created is not only static but also
+              engaging in terms of user experience.</span>
+          </div>
+          <!-- Box slider Card 1 -->
+          <div class="flex-1 w-full h-[260px] md:h-[320px] lg:h-full relative overflow-hidden aspect-[16/10]">
+
+            <!-- Slide track -->
+            <div class="slider-track absolute inset-0 flex transition-transform duration-500 ease-in-out">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Made%20by%20hand.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 1">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2051.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 2">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2050.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 3">
+            </div>
+            <!-- Dots -->
+            <div class="slider-dots absolute bottom-[16px] left-[16px] z-10 flex gap-[8px]">
+              <div class="dot w-[28px] h-[28px] bg-white rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+              <div class="dot w-[28px] h-[28px] bg-black rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+              <div class="dot w-[28px] h-[28px] bg-white rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div
+          class="what-i-do-card w-full h-auto md:h-auto lg:h-[660px] bg-[#0C0C0D] text-[#0C0C0D] rounded-[16px] flex flex-col overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#1E1E1E]">
+          <div class="flex flex-col lg:m-[32px] md:m-[20px] md:mb-[32px] sm:m-[10px] sm:mb-[10px] ">
+            <span class="text-[16px] text-white font-serif italic mb-[16px]">Frontend Developer</span>
+            <span class="text-[24px] text-white text-justify leading-tight tracking-[-0.08em]">My project here began
+              with my UI/UX skills and evolved into a real project. The website I created is not only static but also
+              engaging in terms of user experience.</span>
+          </div>
+
+          <div class="flex-1 w-full h-[260px] md:h-[320px] lg:h-full relative overflow-hidden aspect-[16/10]">
+            <!-- Slide track -->
+            <div class="slider-track absolute inset-0 flex transition-transform duration-500 ease-in-out">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2054.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 1">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2056.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 2">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/home%20revisi.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 3">
+            </div>
+            <!-- Dots -->
+            <div class="slider-dots absolute bottom-[16px] left-[16px] z-10 flex gap-[8px]">
+              <div class="dot w-[28px] h-[28px] bg-white rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+              <div class="dot w-[28px] h-[28px] bg-white/30 rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+              <div class="dot w-[28px] h-[28px] bg-white/30 rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="what-i-do-card w-full h-auto md:h-auto lg:h-[660px] bg-[#0C0C0D] text-[#0C0C0D] rounded-[16px] flex flex-col overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#1E1E1E]">
+          <div class="flex flex-col lg:m-[32px] md:m-[20px] md:mb-[32px] sm:m-[10px] sm:mb-[10px] ">
+            <span class="text-[16px] text-white font-serif italic mb-[16px]">Graphic Design</span>
+            <span class="text-[24px] text-white text-justify leading-tight tracking-[-0.08em]">My project here began
+              with my UI/UX skills and evolved into a real project. The website I created is not only static but also
+              engaging in terms of user experience.</span>
+          </div>
+
+          <div class="flex-1 w-full h-[260px] md:h-[320px] lg:h-full relative overflow-hidden aspect-[16/10]">
+            <!-- Slide track -->
+            <div class="slider-track absolute inset-0 flex transition-transform duration-500 ease-in-out">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2057.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 1">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2058.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 2">
+            </div>
+            <!-- Dots -->
+            <div class="slider-dots absolute bottom-[16px] left-[16px] z-10 flex gap-[8px]">
+              <div class="dot w-[28px] h-[28px] bg-white rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+              <div class="dot w-[28px] h-[28px] bg-white/30 rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div
+          class="what-i-do-card w-full h-auto md:h-auto lg:h-[660px] bg-[#0C0C0D] text-[#0C0C0D] rounded-[16px] flex flex-col overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#1E1E1E]">
+          <div class="flex flex-col lg:m-[32px] md:m-[20px] md:mb-[32px] sm:m-[10px] sm:mb-[10px] ">
+            <span class="text-[16px] text-white font-serif italic mb-[16px]">Illustration</span>
+            <span class="text-[24px] text-white text-justify leading-tight tracking-[-0.08em]">My project here began
+              with my UI/UX skills and evolved into a real project. The website I created is not only static but also
+              engaging in terms of user experience.</span>
+          </div>
+
+          <div class="flex-1 w-full h-[260px] md:h-[320px] lg:h-full relative overflow-hidden aspect-[16/10]">
+            <!-- Slide track -->
+            <div class="slider-track absolute inset-0 flex transition-transform duration-500 ease-in-out">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2059.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 1">
+              <img
+                src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2060.svg"
+                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 2">
+            </div>
+            <!-- Dots -->
+            <div class="slider-dots absolute bottom-[16px] left-[16px] z-10 flex gap-[8px]">
+              <div class="dot w-[28px] h-[28px] bg-white rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+              <div class="dot w-[28px] h-[28px] bg-white/30 rounded-[4px] cursor-pointer transition-all duration-300">
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+  </div>
+
+
+
+  <!--About section-->
+
+  <div class="w-full overflow-x-clip relative z-30">
+    <section id="about-section"
+      class="relative z-30 w-full px-[24px] md:px-[40px] lg:px-[80px] min-h-screen flex flex-col justify-between py-[60px] md:py-[80px] bg-[#EDEDED] rounded-t-[48px] rounded-b-[32px]">
+
+
+
+
+      <!-- 1. ATAS: JUDUL UTAMA DI TENGAH -->
+      <div class="max-w-[1000px] mx-auto text-center mb-[40px] lg:mb-[60px]">
+        <p
+          class="split text-[28px]  md:text-[48px] lg:text-[54px] tracking-[-0.08em] leading-[1.15] bg-gradient-to-r from-[#0C0C0D] from-20% to-[#757575] bg-clip-text text-transparent font-normal">
+          I’m hooked on everything visual from <span class="font-serif italic">design</span> to <span
+            class="font-serif italic">UX</span> —and I vibe with helping — people <span class="font-serif italic">figure
+            out</span> what they actually want.
+        </p>
+      </div>
+
+      <!-- 2. BAWAH: 3 KOLOM SEJAJAR (Teks Kiri - Foto Tengah - Teks Kanan) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-[30px] items-start max-w-[1280px] mx-auto w-full">
+        <!-- KIRI: Nama, Alias, & Specialization (Col-span 4) -->
+        <div
+          class="col-span-1 lg:col-span-4 flex flex-row lg:flex-col justify-between items-start gap-[20px] h-full min-h-[240px] lg:min-h-[440px]">
+          <!-- Nama & Alias -->
+          <div>
+            <h2 class="text-[32px] lg:text-[24px] font-medium tracking-[-0.06em] text-[#0C0C0D] leading-tight">
+              Ahmad <span class="font-serif italic">Safiq</span>
+            </h2>
+            <p class="text-[14px] lg:text-[15px] text-[#757575] tracking-[-0.04em] mt-[4px]">
+              Sapik / Piko / Whatever you want
+            </p>
+          </div>
+
+          <!-- Specialization -->
+          <div class="mt-0">
+            <span class="text-[14px] text-[#757575] tracking-[-0.02em] font-mono">[ Specialization ]</span>
+            <div
+              class="flex flex-wrap gap-x-[16px] gap-y-[8px] text-[14px] lg:text-[15px] text-[#0C0C0D] font-medium tracking-[-0.04em] mt-[8px]">
+              <span>Frontend Web/App</span>
+              <span>UX Research</span>
+              <span>UI Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TENGAH: Black Box + Foto Safiq 3D (Col-span 4) -->
+        <div class="col-span-1 lg:col-span-4 flex justify-center relative my-[20px] lg:my-0">
+          <div
+            class="relative w-full max-w-[320px] md:max-w-[400px] lg:max-w-[360px] h-[360px] md:h-[480px] lg:h-[440px] bg-black rounded-[28px] cursor-pointer overflow-hidden md:-translate-y-[120px] lg:translate-y-0">
+            <img src="/src/assets/safiqjersey.png" alt="Ahmad Safiq"
+              class="w-full h-full object-cover object-top pointer-events-none">
+          </div>
+        </div>
+
+        <!-- KANAN: Deskripsi Pengalaman (Col-span 4) -->
+        <div class="col-span-1 lg:col-span-4 flex items-start">
+          <p
+            class="text-[14px] lg:text-[16px] text-[#757575] tracking-[-0.04em] leading-[1.6] text-center lg:text-left max-w-[500px] mx-auto lg:max-w-none -mt-[80px] md:-mt-[60px] lg:mt-0">
+
+            In addition, I also have knowledge of HTML and CSS. I have also completed several projects related to UI/UX
+            Design, Graphic Design, and also Frontend Developer.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+
+
+  <div class="h-[300vh] relative z-30">
+
+
+    <div class="sticky top-0 h-screen z-40 flex flex-col justify-center overflow-hidden bg-white w-full">
+
+
+      <section id="exploration-section" class="text-white h-auto">
+
+        <!--ekploration section header-->
+        <div class="flex items-start justify-between mb-[56px] px-[80px]">
+
+          <div class="mr-auto items-center w-fit px-[16px] py-[10px] bg-black text-white rounded-[16px]">
+            <span class="text-[20px] font-serif tracking-[-0.08em]">Exploration</span>
+          </div>
+
+          <div class="w-[480px] h-auto text-right">
+            <span class=" split text-[54px] tracking-[-0.08em] mr-auto leading-tight text-[#0C0C0D]">Your <span
+                class="font-serif italic">Project</span><br>Will <span class="font-serif italic"> Look Like</span>
+              This</span>
+          </div>
+        </div>
+
+        <!-- MARQUEE (di luar header flex) -->
+        <div class="flex flex-col gap-[2px] w-full">
+          <!-- BARIS 1: Bergerak ke Kiri (Hanya 1 Baris) -->
+          <div class="marquee-wrapper">
+            <div class="marquee-track to-left">
+
+              <!-- ===== SET ORIGINAL (Ukuran Variatif) ===== -->
+              <!-- 1. Portrait Sempit (320px) -->
+              <div class="marquee-item w-[320px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_1" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 1">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Satu</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    satu ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 2. Landscape Lebar (580px) -->
+              <div class="marquee-item w-[580px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_2" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 2">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Dua</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    dua ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 3. Sedang (420px) -->
+              <div class="marquee-item w-[420px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_3" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 3">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Tiga</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    tiga ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 4. Sangat Lebar (680px) -->
+              <div class="marquee-item w-[680px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_4" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 4">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Empat</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    empat ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 5. Sedang (340px) -->
+              <div class="marquee-item w-[340px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_5" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 5">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Lima</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    lima ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 6. Agak Lebar (520px) -->
+              <div class="marquee-item w-[520px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_6" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 6">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Enam</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    enam ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+
+              <!-- ===== MARQUEE ===== -->
+
+              <!-- 1. Portrait Sempit (320px) -->
+              <div class="marquee-item w-[320px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_1" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 1">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Satu</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    satu ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 2. Landscape Lebar (580px) -->
+              <div class="marquee-item w-[580px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_2" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 2">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Dua</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    dua ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 3. Sedang (420px) -->
+              <div class="marquee-item w-[420px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_3" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 3">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Tiga</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    tiga ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 4. Sangat Lebar (680px) -->
+              <div class="marquee-item w-[680px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_4" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 4">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Empat</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    empat ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 5. Sedang (340px) -->
+              <div class="marquee-item w-[340px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_5" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 5">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Lima</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    lima ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+              <!-- 6. Agak Lebar (520px) -->
+              <div class="marquee-item w-[520px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+                <img src="URL_GAMBAR_6" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 6">
+                <div
+                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Enam</h3>
+                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project
+                    enam ada di sini.</p>
+                  <div class="mt-[8px]"><a href="#"
+                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
+                      Detail</a></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- tutup flex flex-col marquee wrapper -->
+      </section>
+
+    </div>
+  </div>
+
+
+
+
+  <section id="footer"
+    class="relative z-50 bg-black text-white min-h-screen flex flex-col justify-between overflow-hidden mt-[-100vh] py-[40px] md:py-[60px] lg:py-[80px]">
+
+    <!-- Glow gradient background -->
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none blur-[140px]"
+      style="background: radial-gradient(circle, rgba(217,217,217,0.25) 0%, rgba(217,217,217,0) 70%);">
+    </div>
+
+    <!-- 3D Spline di tengah footer -->
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[100px] w-[400px] h-[400px] pointer-events-none z-10">
+
+      <spline-viewer loading-anim-type="spinner-small-dark"
+        url="https://prod.spline.design/2r8Wp7pupcbWakay/scene.splinecode" class="w-full h-full">
+      </spline-viewer>
+    </div>
+
+
+    <div class="flex items-start justify-between px-[24px] md:px-[40px] lg:px-[80px]">
+
+      <div class=" h-auto text-left">
+        <span class=" split text-[64px] tracking-[-0.08em] leading-tight text-white md:text-[40px]">Let’s lock in.
+          and<br><span class="font-serif italic pr-[16px] ">build something dope </span><br>together.</span>
+      </div>
+
+      <div
+        class="inline-flex items-center w-fit gap-[8px] px-[16px] py-[12px] bg-white text-black rounded-full cursor-pointer group">
+        <!-- Teks -->
+        <span class="text-[16px] font-normal tracking-[-0.08em] ">Get In Touch</span>
+        <!-- Ikon Panah -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 inline-block -rotate-45 transition-transform duration-300 group-hover:rotate-0 group-hover:translate-x-0.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      </div>
+
+    </div>
+
+    <div
+      class="w-full flex flex-col md:flex-row items-start md:items-end justify-between px-[24px] md:px-[40px] lg:px-[80px] mt-auto mb-[20px] md:mb-[60px] gap-[24px] md:gap-0">
+      <!-- Bagian KIRI: Follow Me & Ikon Sosmed -->
+      <div>
+        <span class="text-[16px] text-white">Follow Me</span>
+        <div class="flex gap-[16px] mt-[24px]">
+          <div class="w-[55px] h-[55px] rounded-[8px] cursor-pointer bg-[#757575]"></div>
+          <div class="w-[55px] h-[55px] rounded-[8px] cursor-pointer bg-[#757575]"></div>
+          <div class="w-[55px] h-[55px] rounded-[8px] cursor-pointer bg-[#757575]"></div>
+          <div class="w-[55px] h-[55px] rounded-[8px] cursor-pointer bg-[#757575]"></div>
+        </div>
+      </div>
+      <!-- Bagian KANAN: Copyright -->
+      <div class="flex items-center gap-[6px]">
+        <i class="fa-regular fa-copyright text-[16px] mb:text-[12px] text-white"></i>
+        <span class="text-[16px] mb:text-[8px] text-[#FFFFFF] tracking-[-0.08em]">
+          2026 Design & Develope <span class="font-serif italic">With Love</span> - By <span
+            class="font-serif italic">Ahmad Safiq</span>
+        </span>
+      </div>
+    </div>
+
+    </div>
+
+
+
+  </section>
+
+
+
+  <!-- GSAP Core + ScrollTrigger + SplitType (100% Gratis & Bebas Lisensi) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <!-- main.js dipanggil paling akhir -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-serif: "Lora", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+.navbar-scrolled {
+  top: calc(100vh - 90px) !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: max-content !important;
+  border-radius: 16px;
+  background-color: #1F1F1F !important;
+  /* Warna background saat melayang di bawah */
+}
+
+
+.navbar-scrolled a,
+.navbar-scrolled a span {
+  color: #ffffff !important;
+}
+
+
+
+a {
+  font-size: 16px;
+}
+
+
+
+
+
+
+/* Animasi Smooth Per-Kata */
+.split-reveal span {
+  color: #D9D9D9;
+  /* Warna awal saat belum di-scroll */
+  transition: color 0.6s ease-out;
+  /* Membuat efek smooth saat berubah warna */
+}
+
+.split-reveal span.revealed {
+  color: inherit;
+  /* Akan otomatis mengambil warna asli (baik gradient maupun solid) */
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 16px 0px;
+  /* ← Ini kuncinya! Beri ruang atas-bawah untuk efek scale */
+}
+
+
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Baris 1: Bergerak ke KIRI */
+.marquee-track.to-left {
+  animation: scrollLeft 50s linear infinite;
+}
+
+/* Baris 2: Bergerak ke KANAN */
+.marquee-track.to-right {
+  animation: scrollRight 50s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.marquee-item {
+  /* HAPUS HANYA BARIS WIDTH SAJA (width: 625px) agar lebarnya mengikuti w-[...] di HTML */
+  height: 444px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  margin-right: 24px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.marquee-item:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+/* Menjaga bentuk baris & rata teks 100% presisi sama seperti asli */
+.line {
+  overflow: hidden;
+  display: block;
+  text-align: inherit;
+  width: 100%;
+}
+
+/* Memperbaiki Teks Gradien Mulus Per Baris Kalimat */
+.split.bg-clip-text .line {
+  background: linear-gradient(90deg, #0C0C0D 20%, #757575 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
