@@ -61,40 +61,46 @@
           <div
             class="col-span-8 md:col-span-10 lg:col-span-8 p-[8px] text-center flex flex-col justify-center items-center">
             <div
-              class="split bg-clip-text mx-auto text-[64px] md:text-[96px] lg:text-[140px] tracking-[-0.08em] leading-[1.05] mb-[8px]">
-              Making <span
-                class="font-serif italic inline-block pb-[12px] md:pb-[20px] pr-[8px] md:pr-[16px]">Every</span><br>
-              <span class="font-serif italic">Pixel</span> Matter
+              class="split text-center w-full mx-auto text-[38px] sm:text-[48px] md:text-[96px] lg:text-[140px] tracking-[-0.08em] leading-[1.05] mb-[8px]">
+              <span class="block text-center whitespace-nowrap">Making <span
+                  class="font-serif italic">Every</span></span>
+              <span class="block text-center whitespace-nowrap"><span class="font-serif italic">Pixel</span>
+                Matter</span>
             </div>
-            <!-- Subtitle dibuat sedikit lebih jelas -->
+            <!-- Subtitle -->
             <div class="split text-[16px] md:text-[22px] tracking-[-0.08em] text-[#757575]">
               In Every Visual Experience
             </div>
+
+            <!-- Objek 3D (Tampil Khusus di HP di bawah Subtitle) -->
+            <div class="md:hidden w-[220px] h-[160px] sm:w-[280px] sm:h-[200px] mx-auto my-[10px] pointer-events-none">
+              <spline-viewer loading-anim-type="spinner-small-dark"
+                url="https://prod.spline.design/2r8Wp7pupcbWakay/scene.splinecode" class="w-full h-full">
+              </spline-viewer>
+            </div>
+
           </div>
 
           <!-- Kanan Kosong -->
           <div class="col-span-2 md:col-span-1 lg:col-span-2 border-l border-[#d9d9d9]"></div>
         </div>
 
-        <!-- ================= BARIS BAWAH ================= -->
-        <div class="grid grid-cols-12 flex-1">
+        <!-- ================= BARIS BAWAH (Di Dasar Layar HP) ================= -->
+        <div class="grid grid-cols-12 flex-1 items-stretch border-t border-[#d9d9d9]">
 
           <!-- Kiri: Lokasi -->
           <div
-            class="col-span-12 md:col-span-4 lg:col-span-3 border-r-0 md:border-r border-[#d9d9d9] p-[12px] md:p-[24px] lg:p-[32px] flex justify-center md:justify-start items-center order-2 md:order-1">
-            <div
-              class="text-[12px] md:text-[16px] lg:text-[18px] tracking-[-0.08em] text-[#757575] leading-snug text-center md:text-left">
+            class="col-span-6 md:col-span-4 lg:col-span-3 border-r border-[#d9d9d9] p-[10px] md:p-[24px] lg:p-[32px] flex items-center h-full">
+            <div class="text-[11px] md:text-[16px] lg:text-[18px] tracking-[-0.08em] text-[#757575] leading-tight">
               Based in<br>
-              <span class="font-serif italic text-[#0C0C0D] text-[15px] md:text-[20px] lg:text-[22px]">Yogyakarta,
+              <span class="font-serif italic text-[#0C0C0D] text-[14px] md:text-[20px] lg:text-[22px]">Yogyakarta,
                 IDN</span>
             </div>
           </div>
 
-          <!-- Tengah: Objek 3D Spline -->
-          <div
-            class="col-span-12 md:col-span-4 lg:col-span-6 relative flex justify-center items-center order-1 md:order-2 my-[10px] md:my-0">
-            <div
-              class="w-[260px] h-[200px] sm:w-[340px] sm:h-[260px] md:w-[650px] md:h-[420px] lg:w-[1100px] lg:h-[700px] pointer-events-none">
+          <!-- Tengah: Objek 3D Spline (Tampil di Tablet & Desktop) -->
+          <div class="hidden md:flex col-span-4 lg:col-span-6 relative justify-center items-center">
+            <div class="w-[650px] h-[420px] lg:w-[1100px] lg:h-[700px] pointer-events-none">
               <spline-viewer loading-anim-type="spinner-small-dark"
                 url="https://prod.spline.design/2r8Wp7pupcbWakay/scene.splinecode"
                 class="w-full h-full scale-100 origin-center">
@@ -102,29 +108,32 @@
             </div>
           </div>
 
-          <!-- Kanan: Tombol Action -->
-         <div class="col-span-12 md:col-span-4 lg:col-span-3 border-l-0 md:border-l border-[#d9d9d9] p-[12px] md:p-[24px] lg:p-[32px] flex flex-row md:flex-col justify-center items-center gap-[8px] md:gap-[16px] order-3 md:order-3">
+          <!-- Kanan: 2 Tombol Action (Kelihatan 100% di HP) -->
+          <div
+            class="col-span-6 md:col-span-4 lg:col-span-3 border-l border-[#d9d9d9] p-[8px] md:p-[24px] lg:p-[32px] flex flex-col justify-center items-center gap-[6px] md:gap-[16px] h-full">
 
             <!-- Tombol Contact Me -->
             <div
-              class="inline-flex items-center w-fit gap-[6px] md:gap-[8px] px-[12px] md:px-[16px] py-[8px] md:py-[12px] bg-gradient-to-b from-[#8c8c8e] from-[5%] to-[#0c0c0d] to-[50%] text-white rounded-full cursor-pointer group">
-              <span class="text-[13px] md:text-[15px] font-normal tracking-[-0.08em]">Contact Me</span>
+              class="inline-flex items-center w-fit gap-[4px] md:gap-[8px] px-[10px] md:px-[16px] py-[6px] md:py-[12px] bg-gradient-to-b from-[#8c8c8e] from-[5%] to-[#0c0c0d] to-[50%] text-white rounded-full cursor-pointer group">
+              <span class="text-[11px] md:text-[15px] font-normal tracking-[-0.08em]">Contact Me</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor"
-                class="w-4 h-4 md:w-6 md:h-6 inline-block -rotate-45 transition-transform duration-300 group-hover:rotate-0 group-hover:translate-x-0.5">
+                class="w-3.5 h-3.5 md:w-6 md:h-6 inline-block -rotate-45 transition-transform duration-300 group-hover:rotate-0">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>
             </div>
 
             <!-- Tombol See My Resume -->
             <div
-              class="inline-flex items-center w-fit px-[12px] md:px-[16px] py-[8px] md:py-[12px] border border-[#b3b3b3] text-[#757575] rounded-full cursor-pointer transition-all duration-300 hover:border-[#0C0C0D] hover:text-[#0C0C0D] hover:bg-black/5">
-              <span class="text-[13px] md:text-[15px] font-normal tracking-[-0.08em]">See My Resume</span>
+              class="inline-flex items-center w-fit px-[10px] md:px-[16px] py-[6px] md:py-[12px] border border-[#b3b3b3] text-[#757575] rounded-full cursor-pointer transition-all duration-300 hover:border-[#0C0C0D] hover:text-[#0C0C0D] hover:bg-black/5">
+              <span class="text-[11px] md:text-[15px] font-normal tracking-[-0.08em]">See My Resume</span>
             </div>
 
           </div>
 
         </div>
+
+
 
 
       </div>
