@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     hideSplineLogo();
 });
 
-// Inisialisasi Lenis Smooth Scroll
+/*
+/ Inisialisasi Lenis Smooth Scroll
 const lenis = new Lenis({
     duration: 0.5,
     easing: (t) => Math.min(1, 1.001 - Math.pow(4, -10 * t)),
@@ -53,7 +54,7 @@ gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
 });
 gsap.ticker.lagSmoothing(0);
-
+*/
 
 // Logika untuk mengubah posisi Navbar saat di-scroll
 window.addEventListener('scroll', () => {
@@ -205,11 +206,11 @@ ScrollTrigger.create({
 });
 
 ScrollTrigger.create({
-  trigger: "#about-section",
-  start: "bottom bottom",
-  end: "+=100%",
-  pin: true,
- pinSpacing: false,  // ✅ WAJIB false agar Exploration Section meluncur menimpa di depannya!
-  anticipatePin: 1
+    trigger: "#about-section",
+    start: "bottom bottom",
+    end: "+=100%",
+    pin: true,
+    pinSpacing: false,  // ✅ WAJIB false agar Exploration Section meluncur menimpa di depannya!
+    anticipatePin: 1
 });
 
