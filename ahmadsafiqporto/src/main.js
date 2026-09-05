@@ -40,20 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
     hideSplineLogo();
 });
 
-/*
-/ Inisialisasi Lenis Smooth Scroll
-const lenis = new Lenis({
-    duration: 0.5,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(4, -10 * t)),
-    smoothWheel: true,
-});
 
-// Integrasi Lenis dengan GSAP yang benar (bukan pakai requestAnimationFrame manual):
+/*
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    wheelMultiplier: 0.9, // Mencegah hentakan berlebih di mouse wheel Chrome
+});
+// Integrasi GSAP
 lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
 });
-gsap.ticker.lagSmoothing(0);
 */
 
 // Logika untuk mengubah posisi Navbar saat di-scroll
@@ -70,22 +69,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Floating Badge Follower untuk About Section
-const aboutBox = document.getElementById('about-box');
-const aboutBadge = document.getElementById('about-badge');
 
-if (aboutBox && aboutBadge) {
-    aboutBox.addEventListener('mousemove', (e) => {
-        const rect = aboutBox.getBoundingClientRect();
-
-        // Hitung posisi relatif mouse terhadap box hitam
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-
-        aboutBadge.style.transform = `translate(${x + 20}px, ${y + 20}px)`;
-    });
-}
 
 
 // Register ScrollTrigger GSAP
