@@ -34,11 +34,25 @@ html {
 
 
 .navbar-scrolled a,
-.navbar-scrolled a span {
+.navbar-scrolled a span,
+.navbar-scrolled button,
+.navbar-scrolled svg {
   color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
+@media (max-width: 767px) {
+  .navbar-scrolled {
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    transform: none !important;
+  }
+} 
 
+.mobile-nav-link {
+  font-size: 56px !important;
+}
 
 a {
   font-size: 16px;

@@ -198,3 +198,39 @@ ScrollTrigger.create({
     anticipatePin: 1
 });
 
+// ================= LOGIC MOBILE BURGER MENU =================
+const burgerBtn = document.getElementById('burger-btn');
+const burgerIconOpen = document.getElementById('burger-icon-open');
+const burgerIconClose = document.getElementById('burger-icon-close');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+if (burgerBtn && mobileMenu) {
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('opacity-100');
+    
+    if (!isOpen) {
+      // Buka Menu Overlay
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      burgerIconOpen.classList.add('hidden');
+      burgerIconClose.classList.remove('hidden');
+    } else {
+      // Tutup Menu Overlay
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      burgerIconOpen.classList.remove('hidden');
+      burgerIconClose.classList.add('hidden');
+    }
+  });
+
+  // Otomatis Tutup Menu jika salah satu link diklik
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      burgerIconOpen.classList.remove('hidden');
+      burgerIconClose.classList.add('hidden');
+    });
+  });
+}

@@ -19,17 +19,19 @@
 
 <body class="bg-[#F1F1F1] text-slate-800 antialiased min-h-screen overflow-x-hidden">
 
-  <!-- HEADER / NAVBAR (Tema Gelap) -->
-  <header id="navbar" class="h-[64px] fixed top-[15px] left-[360px] right-[360px] lg:left-[370px] lg:right-[370px] md:left-[180px] md:right-[180px]
-
+  <!-- HEADER / NAVBAR (Tema Gelap) ASLI KAMU -->
+  <header id="navbar"
+    class="h-[64px] fixed top-[15px] left-[20px] right-[20px] md:left-[180px] md:right-[180px] lg:left-[370px] lg:right-[370px]
          z-[1000] flex justify-between items-center gap-[48px] md:gap-[24px] lg:gap-[120px]
-         px-[32px] md:px-[16px] lg:px-[32px] text-black rounded-[16px] transition-all duration-700 ease-in-out">
-    <!-- Logo -->
+         px-[20px] md:px-[16px] lg:px-[32px] text-black rounded-[16px] transition-all duration-700 ease-in-out  backdrop-blur-md md:backdrop-blur-none ">
+
+    <!-- Logo Asli Kamu -->
     <a href="#"
       class="text-[16px] md:text-[14px] tracking-wide transition-opacity hover:opacity-75 text-black md:text-black">
       <span class="font-serif italic text-black md:text-black">P</span>iko
     </a>
-    <!-- Nav links (desktop/tablet) -->
+
+    <!-- Nav links (desktop/tablet) ASLI KAMU (GAK DIUBAH SAMA SEKALI) -->
     <nav
       class="hidden md:flex items-center gap-[120px] text-[16px] md:gap-[24px] text-black md:text-black tracking-[-0.08em]">
       <a href="#about-section" class="hover:text-black md:hover:text-gray-200 transition-colors duration-300">About</a>
@@ -39,7 +41,35 @@
         class="hover:text-black md:hover:text-gray-200 transition-colors duration-300">Exploration</a>
     </nav>
 
+    <!-- HANYA TAMBAHKAN TOMBOL BURGER INI UNTUK MOBILE (hidden di md) -->
+    <button id="burger-btn"
+      class="md:hidden text-current p-1 focus:outline-none flex items-center justify-center cursor-pointer">
+      <svg id="burger-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+        stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+      <svg id="burger-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+        stroke="currentColor" class="w-6 h-6 hidden">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
   </header>
+
+  <!-- OVERLAY POP-UP MOBILE (Hanya aktif di HP saat burger diklik) -->
+  <div id="mobile-menu"
+    class="md:hidden fixed inset-0 z-[999] bg-[#F1F1F1]/98 backdrop-blur-xl flex flex-col justify-between p-[32px] pt-[100px] pb-[40px] transition-all duration-300 opacity-0 pointer-events-none -translate-y-4">
+    <div class="flex flex-col gap-[28px] text-center my-auto">
+      <a href="#about-section" class="mobile-nav-link text-[100px] font-medium tracking-[-0.06em] text-black">About</a>
+      <a href="#what-i-do-section" class="mobile-nav-link text-[100px] font-medium tracking-[-0.06em] text-black">What I
+        Do</a>
+      <a href="#exploration"
+        class="mobile-nav-link text-[100px] font-medium tracking-[-0.06em] text-black">Exploration</a>
+    </div>
+  </div>
+
+
+
 
   <div class="h-[200vh] relative">
     <!-- Home Section: sticky agar diam di layar saat di-scroll -->
@@ -68,7 +98,7 @@
               <span class="block md:inline font-serif italic">Every&nbsp;</span>
               <span class="block md:inline font-serif italic">Pixel&nbsp;</span>
               <span class="block md:inline">Matter</span>
-            </h1> 
+            </h1>
 
             <!-- Subtitle -->
             <div class="split text-[14px] md:text-[22px] tracking-[-0.08em]
