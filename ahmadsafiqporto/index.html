@@ -57,23 +57,33 @@
           <!-- Kiri Kosong -->
           <div class="hidden md:block col-span-2 md:col-span-1 lg:col-span-2 border-r border-[#d9d9d9]"></div>
 
-          <!-- Tengah: Judul & Subtitle -->
+          <!-- Tengah: Judul & Subtitle & 3D Mobile (PEMBUNGKUS UTAMA INI WAJIB ADA) -->
           <div
-            class="col-span-12 md:col-span-10 lg:col-span-8 p-[8px] text-center flex flex-col justify-center items-center">
+            class="col-span-12 md:col-span-10 lg:col-span-8 p-[8px] text-center flex flex-col justify-center items-center relative">
+
+            <!-- Judul: 4 Baris di HP, 2 Baris di Desktop -->
             <div
-              class="split text-center w-full mx-auto text-[48px] sm:text-[48px] md:text-[96px] lg:text-[140px] tracking-[-0.08em] leading-[1.05] mb-[8px] text-black text-center">
-              <span class="block text-center whitespace-nowrap">Making <span
-                  class="font-serif italic">Every</span></span>
-              <span class="block text-center whitespace-nowrap"><span class="font-serif italic">Pixel</span>
-                Matter</span>
+              class="split text-center w-full mx-auto text-[44px] sm:text-[48px] md:text-[96px] lg:text-[140px] tracking-[-0.08em] leading-[1.05] mb-[8px] text-black">
+
+              <!-- HP: Baris 1 & 2 -->
+              <h1 class="split title-hero w-full mx-auto text-[68px] sm:text-[48px] md:text-[96px] lg:text-[140px]
+         tracking-[-0.08em] leading-[1.16] mb-[8px] text-black text-center">
+                <span class="block md:inline">Making</span>
+                <span class="block md:inline font-serif italic">Every</span>
+                <span class="block md:inline font-serif italic">Pixel</span>
+                <span class="block md:inline">Matter</span>
+              </h1>
+
+
             </div>
+
             <!-- Subtitle -->
-            <div class="split text-[16px] md:text-[22px] tracking-[-0.08em] text-[#757575]">
+            <div class="split text-[14px] md:text-[22px] tracking-[-0.08em] text-[#757575]">
               In Every Visual Experience
             </div>
 
-            <!-- Objek 3D (Tampil Khusus di HP di bawah Subtitle) -->
-            <div class="md:hidden w-[220px] h-[160px] sm:w-[280px] sm:h-[200px] mx-auto my-[10px] pointer-events-none">
+            <!-- Objek 3D di HP: Di Bawah Subtitle & Menimpa Garis Bawah -->
+            <div class="md:hidden w-[240px] h-[160px] mx-auto -mb-[45px] mt-[5px] pointer-events-none relative z-20">
               <spline-viewer loading-anim-type="spinner-small-dark"
                 url="https://prod.spline.design/2r8Wp7pupcbWakay/scene.splinecode" class="w-full h-full">
               </spline-viewer>
@@ -85,6 +95,7 @@
           <div class="hidden md:block col-span-2 md:col-span-1 lg:col-span-2 border-l border-[#d9d9d9]"></div>
 
         </div>
+
 
         <!-- ================= BARIS BAWAH (Di Dasar Layar HP) ================= -->
         <div class="grid grid-cols-12 flex-1 items-stretch border-t border-[#d9d9d9]">
@@ -289,9 +300,7 @@
           <div class="flex-1 w-full h-[260px] md:h-[320px] lg:h-full relative overflow-hidden aspect-[16/10]">
             <!-- Slide track -->
             <div class="slider-track absolute inset-0 flex transition-transform duration-500 ease-in-out">
-              <img
-                src="  "
-                class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 1">
+              <img src="  " class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 1">
               <img
                 src="https://phplxheoenpmniqvqgzb.supabase.co/storage/v1/object/public/portfolio/Whatido/Desktop%20-%2060.svg"
                 class="w-full h-full object-cover text-white flex-shrink-0" alt="slide 2">
@@ -592,7 +601,8 @@
     <div class="flex items-start justify-between px-[24px] md:px-[40px] lg:px-[80px]">
 
       <div class=" h-auto text-left">
-        <span class=" split text-[64px] tracking-[-0.08em] leading-tight text-white lg:text-[64px] md:text-[40px]">Let’s lock in.
+        <span class=" split text-[64px] tracking-[-0.08em] leading-tight text-white lg:text-[64px] md:text-[40px]">Let’s
+          lock in.
           and<br><span class="font-serif italic pr-[16px] ">build something dope </span><br>together.</span>
       </div>
 
