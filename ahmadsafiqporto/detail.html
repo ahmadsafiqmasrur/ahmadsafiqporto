@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exploration Detail - Ahmad Safiq</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-[#F1F1F1] text-[#0C0C0D] antialiased min-h-screen p-[20px] md:p-[40px] lg:p-[60px]">
+
+  <!-- HEADER DETAIL -->
+  <header class="flex items-center justify-between max-w-[1280px] mx-auto mb-[40px] md:mb-[60px]">
+    <a href="index.html#exploration-section"
+      class="inline-flex items-center gap-[10px] px-[20px] py-[10px] bg-[#0C0C0D] text-white rounded-full text-[14px] font-medium tracking-[-0.02em] hover:bg-[#222222] transition-colors shadow-sm">
+      <i class="fa-solid fa-arrow-left text-[13px]"></i> Back
+    </a>
+    <span class="text-[22px] md:text-[32px] font-sans font-medium tracking-[-0.06em] text-[#0C0C0D]">
+      Exploration <span class="font-serif italic">Detail</span>
+    </span>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-[1280px] mx-auto">
+    
+    <!-- LOADING STATE -->
+    <div id="loading-state" class="flex flex-col items-center justify-center py-[100px]">
+      <div class="w-10 h-10 border-4 border-black/20 border-t-black rounded-full animate-spin mb-4"></div>
+      <p class="text-[#757575] font-mono text-[14px]">Memuat detail projek...</p>
+    </div>
+
+    <!-- ERROR STATE -->
+    <div id="error-state" class="hidden flex flex-col items-center justify-center py-[100px] text-center">
+      <h3 class="text-[24px] font-medium text-red-600 mb-2">Projek Tidak Ditemukan</h3>
+      <p class="text-[#757575] text-[14px] mb-6">Data projek yang kamu cari belum tersedia di database.</p>
+      <a href="index.html#exploration-section" class="px-6 py-2 bg-black text-white rounded-full text-sm">Kembali ke Beranda</a>
+    </div>
+
+    <!-- CONTENT SECTION -->
+    <div id="detail-content" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-[32px] lg:gap-[60px] items-start mb-[80px] md:mb-[120px]">
+
+      <!-- GAMBAR UTAMA & GALERI & FITUR -->
+      <div class="lg:col-span-6 flex flex-col gap-[24px]">
+        
+        <!-- Main Image Box -->
+        <div class="w-full aspect-[4/3] bg-black/5 rounded-[28px] overflow-hidden border border-black/10 relative shadow-sm">
+          <img id="main-image" src="" alt="" class="w-full h-full object-cover transition-all duration-500">
+        </div>
+
+        <!-- Thumbnail Gallery Row -->
+        <div id="gallery-container" class="flex gap-[12px] overflow-x-auto no-scrollbar pb-[4px]">
+          <!-- Thumbnails injected dynamically via JS -->
+        </div>
+
+        <!-- Section Fitur -->
+        <div class="mt-[16px]">
+          <h4 class="text-[16px] font-sans font-medium text-[#0C0C0D] mb-[12px] tracking-[-0.04em]">Fitur</h4>
+          <div id="features-container" class="flex flex-wrap gap-[10px]">
+            <!-- Feature badges injected dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- METADATA & DESKRIPSI -->
+      <div class="lg:col-span-6 flex flex-col gap-[32px]">
+        
+        <!-- Judul & Deskripsi -->
+        <div>
+          <h1 id="project-title" class="text-[36px] md:text-[48px] lg:text-[56px] font-sans font-medium tracking-[-0.06em] leading-[1.1] text-[#0C0C0D]">
+            Judul Projek
+          </h1>
+          <p id="project-desc" class="text-[14px] md:text-[16px] text-[#757575] leading-[1.7] tracking-[-0.02em] mt-[20px] whitespace-pre-line">
+            Deskripsi projek akan muncul di sini...
+          </p>
+        </div>
+
+        <!-- Role -->
+        <div class="border-t border-black/10 pt-[24px]">
+          <span class="text-[14px] text-[#757575] font-mono tracking-[-0.02em] block mb-[6px]">Role</span>
+          <span id="project-role" class="text-[16px] md:text-[18px] text-[#0C0C0D] font-medium tracking-[-0.04em]">
+            UI/UX Designer
+          </span>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="border-t border-black/10 pt-[24px]">
+          <h4 class="text-[14px] text-[#757575] font-mono tracking-[-0.02em] mb-[12px]">Tech Stack</h4>
+          <div id="tech-stack-container" class="flex flex-wrap gap-[10px]">
+            <!-- Tech stack badges injected dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BOTTOM SECTION: SEE OTHER SIMILAR EXPLORATIONS -->
+    <section id="similar-section" class="hidden border-t border-black/10 pt-[40px] md:pt-[60px] pb-[60px]">
+      <h2 class="text-[24px] md:text-[36px] font-sans font-medium tracking-[-0.06em] text-[#0C0C0D] mb-[32px]">
+        See other <span class="font-serif italic">similar explorations</span>
+      </h2>
+
+      <div id="similar-container" class="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
+        <!-- Similar projects cards injected dynamically -->
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="/src/detail.js"></script>
+</body>
+
+</html>
