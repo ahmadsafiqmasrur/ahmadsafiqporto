@@ -252,7 +252,7 @@
               <div class="dot w-[28px] h-[28px] bg-white rounded-[4px] cursor-pointer transition-all duration-300">
               </div>
             </div>
-          </div>
+          </div>      
         </div>
 
 
@@ -438,215 +438,102 @@
 
       <section id="exploration-section" class="text-white h-auto">
 
-        <!--ekploration section header-->
-        <div class="flex items-start justify-between mb-[56px] px-[20px] md:px-[40px] lg:px-[80px]">
+        <!-- EXPLORATION SECTION HEADER (Dengan Tombol Arrow Navigasi) -->
+        <div class="flex items-end justify-between mb-[32px] px-[20px] md:px-[40px] lg:px-[80px]">
 
-          <div class="flex flex-col lg:m-[32px] md:m-[20px] md:mb-[32px] m-[10px] mb-[10px]  ">
-            <span class="lg:text-[16px] text-[12px] text-[#0C0C0D] font-serif italic mb-[16px]">Exploration</span>
-          </div>
-
-          <div class="w-[480px] h-auto text-right">
-            <span class=" split text-[24px] lg:text-[54px] tracking-[-0.08em] mr-auto leading-tight text-[#0C0C0D]">Your
-              <span class="font-serif italic">Project</span><br>Will <span class="font-serif italic"> Look Like</span>
-              This</span>
-          </div>
-        </div>
-
-        <!-- MARQUEE (di luar header flex) -->
-        <div class="flex flex-col gap-[2px] w-full">
-          <!-- BARIS 1: Bergerak ke Kiri (Hanya 1 Baris) -->
-          <div class="marquee-wrapper">
-            <div class="marquee-track to-left">
-
-              <!-- ===== SET ORIGINAL (Ukuran Variatif) ===== -->
-              <!-- 1. Portrait Sempit (320px) -->
-              <div
-                class="marquee-item w-[220px] lg:w-[320px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_1" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 1">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Satu</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    satu ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 2. Landscape Lebar (580px) -->
-              <div
-                class="marquee-item w-[320px] lg:w-[580px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_2" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 2">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Dua</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    dua ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 3. Sedang (420px) -->
-              <div
-                class="marquee-item w-[260px] lg:w-[420px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_3" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 3">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Tiga</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    tiga ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 4. Sangat Lebar (680px) -->
-              <div
-                class="marquee-item w-[360px] lg:w-[680px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_4" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 4">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Empat</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    empat ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 5. Sedang (340px) -->
-              <div
-                class="marquee-item w-[240px] lg:w-[340px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_5" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 5">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Lima</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    lima ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 6. Agak Lebar (520px) -->
-              <div
-                class="marquee-item w-[300px] lg:w-[520px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_6" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 6">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Enam</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    enam ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-
-              <!-- ===== MARQUEE ===== -->
-
-              <!-- 1. Portrait Sempit (320px) -->
-              <div
-                class="marquee-item w-[220px] lg:w-[320px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_1" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 1">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Satu</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    satu ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 2. Landscape Lebar (580px) -->
-              <div
-                class="marquee-item w-[320px] lg:w-[580px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_2" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 2">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Dua</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    dua ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 3. Sedang (420px) -->
-              <div
-                class="marquee-item w-[260px] lg:w-[420px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_3" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 3">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Tiga</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    tiga ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 4. Sangat Lebar (680px) -->
-              <div
-                class="marquee-item w-[360px] lg:w-[680px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_4" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 4">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Empat</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    empat ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 5. Sedang (340px) -->
-              <div
-                class="marquee-item w-[240px] lg:w-[340px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_5" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 5">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Lima</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    lima ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-              <!-- 6. Agak Lebar (520px) -->
-              <div
-                class="marquee-item w-[300px] lg:w-[520px] relative overflow-hidden group cursor-pointer rounded-[24px]">
-                <img src="URL_GAMBAR_6" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 6">
-                <div
-                  class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
-                  <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Enam</h3>
-                  <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi
-                    project
-                    enam ada di sini.</p>
-                  <div class="mt-[8px]"><a href="#"
-                      class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat
-                      Detail</a></div>
-                </div>
-              </div>
-
+          <!-- Judul Kiri & Kanan -->
+          <div class="flex flex-col">
+            <span class="lg:text-[16px] text-[12px] text-[#0C0C0D] font-serif italic mb-[8px]">Exploration</span>
+            <div class="w-full max-w-[480px]">
+              <span class="split text-[24px] lg:text-[54px] tracking-[-0.08em] leading-tight text-[#0C0C0D]">
+                Your <span class="font-serif italic">Project</span><br>Will <span class="font-serif italic">Look Like</span> This
+              </span>
             </div>
           </div>
-          <!-- tutup flex flex-col marquee wrapper -->
+
+          <!-- Tombol Navigasi Arrow Kiri & Kanan -->
+          <div class="flex items-center gap-[12px]">
+            <button id="prev-btn" class="w-[44px] h-[44px] lg:w-[52px] lg:h-[52px] rounded-full border border-[#0C0C0D]/20 flex items-center justify-center text-[#0C0C0D] hover:bg-[#0C0C0D] hover:text-white transition-all duration-300 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5 lg:w-6 lg:h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            <button id="next-btn" class="w-[44px] h-[44px] lg:w-[52px] lg:h-[52px] rounded-full border border-[#0C0C0D]/20 flex items-center justify-center text-[#0C0C0D] hover:bg-[#0C0C0D] hover:text-white transition-all duration-300 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5 lg:w-6 lg:h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- PROJECT SLIDER CONTAINER (Gantikan Marquee) -->
+        <div id="project-slider" class="flex gap-[20px] overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory px-[20px] md:px-[40px] lg:px-[80px] py-[10px] w-full">
+
+          <!-- 1. Portrait Sempit (320px) -->
+          <div class="marquee-item snap-start flex-shrink-0 w-[220px] lg:w-[320px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+            <img src="URL_GAMBAR_1" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 1">
+            <div class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+              <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Satu</h3>
+              <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project satu ada di sini.</p>
+              <div class="mt-[8px]"><a href="#" class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat Detail</a></div>
+            </div>
+          </div>
+
+          <!-- 2. Landscape Lebar (580px) -->
+          <div class="marquee-item snap-start flex-shrink-0 w-[320px] lg:w-[580px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+            <img src="URL_GAMBAR_2" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 2">
+            <div class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+              <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Dua</h3>
+              <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project dua ada di sini.</p>
+              <div class="mt-[8px]"><a href="#" class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat Detail</a></div>
+            </div>
+          </div>
+
+          <!-- 3. Sedang (420px) -->
+          <div class="marquee-item snap-start flex-shrink-0 w-[260px] lg:w-[420px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+            <img src="URL_GAMBAR_3" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 3">
+            <div class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+              <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Tiga</h3>
+              <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project tiga ada di sini.</p>
+              <div class="mt-[8px]"><a href="#" class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat Detail</a></div>
+            </div>
+          </div>
+
+          <!-- 4. Sangat Lebar (680px) -->
+          <div class="marquee-item snap-start flex-shrink-0 w-[360px] lg:w-[680px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+            <img src="URL_GAMBAR_4" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 4">
+            <div class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+              <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Empat</h3>
+              <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project empat ada di sini.</p>
+              <div class="mt-[8px]"><a href="#" class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat Detail</a></div>
+            </div>
+          </div>
+
+          <!-- 5. Sedang (340px) -->
+          <div class="marquee-item snap-start flex-shrink-0 w-[240px] lg:w-[340px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+            <img src="URL_GAMBAR_5" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 5">
+            <div class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+              <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Lima</h3>
+              <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project lima ada di sini.</p>
+              <div class="mt-[8px]"><a href="#" class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat Detail</a></div>
+            </div>
+          </div>
+
+          <!-- 6. Agak Lebar (520px) -->
+          <div class="marquee-item snap-start flex-shrink-0 w-[300px] lg:w-[520px] relative overflow-hidden group cursor-pointer rounded-[24px]">
+            <img src="URL_GAMBAR_6" class="absolute inset-0 w-full h-full object-cover z-0" alt="Project 6">
+            <div class="absolute bottom-0 left-0 w-full bg-[#0C0C0D] p-[24px] rounded-t-[24px] transform translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col gap-[12px] z-10">
+              <h3 class="text-[20px] text-white font-sans font-medium tracking-[-0.04em]">Project Enam</h3>
+              <p class="text-[12px] text-[#888888] leading-[1.6] tracking-[-0.02em] line-clamp-3">Deskripsi project enam ada di sini.</p>
+              <div class="mt-[8px]"><a href="#" class="text-[13px] text-white font-serif italic underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors duration-300">Lihat Detail</a></div>
+            </div>
+          </div>
+
+        </div>
+
       </section>
+
 
     </div>
   </div>
