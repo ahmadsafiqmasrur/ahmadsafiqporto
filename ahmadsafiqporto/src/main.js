@@ -103,6 +103,13 @@ document.fonts.ready.then(() => {
     });
 });
 
+window.addEventListener("resize", () => {
+    document.querySelectorAll(".split").forEach((element) => {
+        if (element.splitInstance) {
+            element.splitInstance.split();
+        }
+    });
+});
 
 // Animasi About Section: Zoom Out + Naik dari Bawah + Fade In
 gsap.fromTo('#about-section',
