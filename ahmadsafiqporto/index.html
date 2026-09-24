@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+  <link rel="icon" type="image/svg+xml" href="/logo-piko.svg?v=3" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahmad Safiq Portofolio</title>
   <!-- Import Font Outfit untuk nuansa modern minimalis -->
@@ -618,13 +618,19 @@
           <div class="w-[55px] h-[55px] rounded-[8px] cursor-pointer bg-[#757575]"></div>
         </div>
       </div>
-      <!-- Bagian KANAN: Copyright -->
-      <div class="flex items-center gap-[8px]">
-        <i class="fa-regular fa-copyright text-[12px] mb:text-[8px] text-white"></i>
-        <span class="text-[12px] mb:text-[8px] text-[#FFFFFF] tracking-[-0.08em]">
-          2026 Design & Develope <span class="font-serif italic">With Love</span> - By <span
-            class="font-serif italic">Ahmad Safiq</span>
-        </span>
+      <!-- Bagian KANAN: Logo Footer & Copyright -->
+      <div class="flex flex-col items-start md:items-end gap-[32px]">
+        <!-- Logo Footer (Hanya tampil di Tablet & Desktop, hidden di HP) -->
+        <img src="/src/assets/logo-footer.png" alt="Piko Logo Footer" class="hidden md:block h-[180px] lg:h-[280px] w-auto object-contain">
+        
+        <!-- Copyright -->
+        <div class="flex items-center gap-[8px]">
+          <i class="fa-regular fa-copyright text-[12px] text-white"></i>
+          <span class="text-[12px] text-[#FFFFFF] tracking-[-0.08em]">
+            2026 Design & Develope <span class="font-serif italic">With Love</span> - By <span
+              class="font-serif italic">Ahmad Safiq</span>
+          </span>
+        </div>
       </div>
     </div>
 
