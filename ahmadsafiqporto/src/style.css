@@ -168,6 +168,7 @@ h1.title-hero span {
   display: block;
   text-align: inherit;
   width: 100%;
+  padding: 4px 0 !important;
 }
 
 /* Memperbaiki Teks Gradien Mulus Per Baris Kalimat */
